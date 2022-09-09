@@ -1,5 +1,7 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-
 export default function handler(req, res) {
-  res.status(200).json({ name: 'John Doe' })
+  res.status(200).json([
+    { title: "Mobiles, Computers", count: "30", slug: "mobile" },
+    { title: "TV, Appliances, Electronics", count: "30", slug: "appliances" },
+    { title: "Mens Fashion", count: "30", slug: "mensfashion" },
+  ]);
 }
