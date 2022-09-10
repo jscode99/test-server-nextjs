@@ -1,6 +1,12 @@
 export default function handler(req, res) {
   console.log("Request", req.query.cate);
   switch (req.query.cate) {
+    case "product":
+      res.status(200).json([
+        { id: 1, productName: "Product 1", price: "$10" },
+        { id: 2, productName: "Product 2", price: "$20" },
+      ]);
+      break;
     case "mobile":
       res.status(200).json([
         { title: "All Mobile Phones", count: "20", slug: "all" },
@@ -168,13 +174,13 @@ export default function handler(req, res) {
       break;
     default:
       res.status(200).json([
-        { title: "Mobiles, Computers", count: "30", slug: "mobile" },
+        { title: "Mobiles, Computers", count: "50", slug: "mobile" },
         {
           title: "TV, Appliances, Electronics",
           count: "30",
           slug: "appliances",
         },
-        { title: "Mens Fashion", count: "30", slug: "mensfashion" },
+        { title: "Mens Fashion", count: "60", slug: "mensfashion" },
       ]);
   }
 }
